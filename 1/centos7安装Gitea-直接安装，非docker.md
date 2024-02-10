@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-10T07:43:28.839Z
+updatedAt: 2024-02-10T07:46:49.433Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
@@ -230,17 +230,17 @@ systemctl start gitea
 相关配置：
 
 * 运行目录
-* /home/gitea1/
+* /home/gitea/
 * 命令
 * /usr/local/bin/gitea web
 * 用户
-* gitea1
+* gitea
 
 
 添加服务后需要在额外在配置文件中加 1 行
 
 ```
-environment = HOME="/home/gitea1"
+environment = HOME="/home/gitea"
 ```
 
 完整配置文件 （手动添加supervisor配置文件可以使用这个配置文件实现守护进程）
@@ -248,7 +248,7 @@ environment = HOME="/home/gitea1"
 ```
 [program:Gitea]
 command=/usr/local/bin/gitea web
-directory=/home/gitea1/
+directory=/home/gitea/
 autorestart=true
 startsecs=3
 startretries=3
@@ -256,7 +256,7 @@ stdout_logfile=/www/server/panel/plugin/supervisor/log/Gitea.out.log
 stderr_logfile=/www/server/panel/plugin/supervisor/log/Gitea.err.log
 stdout_logfile_maxbytes=2MB
 stderr_logfile_maxbytes=2MB
-user=gitea1
+user=gitea
 priority=999
 numprocs=1
 process_name=%(program_name)s_%(process_num)02d
