@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-10T08:09:20.098Z
+updatedAt: 2024-02-11T13:56:34.351Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
