@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-13T05:29:49.535Z
+updatedAt: 2024-02-13T05:40:58.917Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
@@ -141,8 +141,10 @@ useradd gitea -g root
 
 这里可以手动创建这些目录和文件，并把所有者改成运行gitea的那个用户（`gitea`），给读写权限。
 
-2024/2/13更新：
+>2024/2/13更新：
 gitea运行的时候可以直接指定一个目录，即`WORK_PATH`，这个目录用来存储gitea程序运行时的各种文件夹、文件。
+
+下文中指定的`WORK_PATH`均为`/opt/gitea`。
 
 #### 指定`WORK_PATH`启动
 
