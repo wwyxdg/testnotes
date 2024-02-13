@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-13T04:49:53.456Z
+updatedAt: 2024-02-13T05:29:49.535Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
@@ -127,6 +127,7 @@ useradd gitea -g root
 ```
 添加完用户后最好使用passwd命令重置下密码
 
+
 ### 创建 gitea 的配置文件和运行所需的目录，并设置相应的权限。
 >gitea运行时会在gitea程序所在的目录（这里是`/usr/local/bin`）中创建custom、data和log文件夹，custom、data用于存储运行所需的数据，log文件夹用于存储运行时产生的日志。
 >
@@ -140,8 +141,27 @@ useradd gitea -g root
 
 这里可以手动创建这些目录和文件，并把所有者改成运行gitea的那个用户（`gitea`），给读写权限。
 
+2024/2/13更新：
+gitea运行的时候可以直接指定一个目录，即`WORK_PATH`，这个目录用来存储gitea程序运行时的各种文件夹、文件。
 
-#### 创建文件夹、文件
+#### 指定`WORK_PATH`启动
+
+创建文件夹、文件
+
+```
+mkdir /opt/gitea
+```
+
+改文件、文件夹所有者，给写入权限
+
+```
+chown -R gitea /opt/gitea
+chmod -R 755 /opt/gitea
+```
+
+#### 以默认方式（不添加任何附加参数）启动
+
+创建文件夹、文件
 
 
 ```
@@ -150,16 +170,20 @@ mkdir /usr/local/bin/custom
 mkdir /usr/local/bin/log
 ```
 
-#### 改文件、文件夹所有者，给写入权限
+改文件、文件夹所有者，给写入权限
 
 ```
 chown -R gitea /usr/local/bin/custom
 chown -R gitea /usr/local/bin/data
-chmod -R 755 /usr/local/bin/data
+chown -R gitea /usr/local/bin/log
 chmod -R 755 /usr/local/bin/custom
+chmod -R 755 /usr/local/bin/data
+chmod -R 755 /usr/local/bin/log
 chown -R gitea /opt/gitea
 chmod -R 755 /opt/gitea
+
 ```
+
 
 >用于存储repository，和lfs功能时需要存储的文件都放在/opt/gitea文件夹中
 >
@@ -178,7 +202,21 @@ chmod -R 755 /opt/gitea
 su gitea
 ```
 
-测试运行
+开始测试运行
+
+
+#### 指定`WORK_PATH`启动
+
+执行
+```
+gitea web  -w /opt/gitea
+```
+或
+```
+/usr/local/bin/gitea web -w /opt/gitea
+```
+
+#### 以默认方式（不添加任何附加参数）启动
 
 执行
 ```
@@ -216,7 +254,7 @@ Description=gitea
 #启动用户
 User=gitea1
 #启动命令
-ExecStart=/usr/local/bin/gitea web
+ExecStart=/usr/local/bin/gitea web -w /opt/gitea
 #自动重启
 Restart=on-abort
 
@@ -224,6 +262,7 @@ Restart=on-abort
 #多用户模式
 WantedBy=multi-user.target
 ```
+>注意：ExecStart对应的是gitea的启动命令，如果以默认方式启动，需要删除` -w /opt/gitea`
 
 按 esc，输入:wq 保存
 依次执行：
@@ -264,7 +303,7 @@ environment = HOME="/home/gitea"
 
 ```
 [program:Gitea]
-command=/usr/local/bin/gitea web
+command=/usr/local/bin/gitea web -w /opt/gitea
 directory=/home/gitea/
 autorestart=true
 startsecs=3
@@ -280,6 +319,8 @@ process_name=%(program_name)s_%(process_num)02d
 environment = HOME="/home/gitea"
 
 ```
+>注意：command对应的是gitea的启动命令，如果以默认方式启动，需要删除` -w /opt/gitea`
+
 
 ## 其余步骤
 
