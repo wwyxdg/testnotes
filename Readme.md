@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-13 13:44:20
+updatedAt: 2024-02-13 15:56:28
 ---
 
 
@@ -18,7 +18,7 @@ updatedAt: 2024-02-13 13:44:20
 
 5. [nginx反代vanblog配置.md](src/branch/master/5/nginx反代vanblog配置.md)
 
-6. [docker安装与配置（未完结）.md](src/branch/master/6/docker安装与配置（未完结）.md)
+6. [Debian、Ubuntu安装docker与docker-compose.md](src/branch/master/6/Debian、Ubuntu安装docker与docker-compose.md)
 
 
 
@@ -34,5 +34,5 @@ updatedAt: 2024-02-13 13:44:20
 
 5. [nginx反代vanblog配置.md](5/nginx反代vanblog配置.md)
 
-6. [docker安装与配置（未完结）.md](6/docker安装与配置（未完结）.md)
+6. [Debian、Ubuntu安装docker与docker-compose.md](6/Debian、Ubuntu安装docker与docker-compose.md)
 
