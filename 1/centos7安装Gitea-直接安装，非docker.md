@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-11T13:56:34.351Z
+updatedAt: 2024-02-13T04:49:53.456Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
@@ -109,6 +109,8 @@ wget -O gitea https://dl.gitea.com/gitea/1.21.4/gitea-1.21.4-linux-amd64
 
 ### 将下载的 gitea 文件移动到 /usr/local/bin 目录下，并给予 gitea 可执行权限。
 
+把文件移动到/usr/local/bin 目录下是为了方便全局访问。在其他位置直接输入gitea就能启动程序，程序名称前面不需要带目录。
+
 ```
 sudo mv gitea /usr/local/bin/
 sudo chmod +x /usr/local/bin/gitea
@@ -125,18 +127,32 @@ useradd gitea -g root
 ```
 添加完用户后最好使用passwd命令重置下密码
 
-### 创建 gitea 的配置文件，并设置相应的权限。
-创建的文件夹和配置文件是gitea程序运行时所需要的，最新版gitea程序不允许使用root用户运行，只能使用非root用户运行，虽然gitea运行时会自动创建文件夹，但是因为权限不足创建失败，然后程序报错，结束运行...
+### 创建 gitea 的配置文件和运行所需的目录，并设置相应的权限。
+>gitea运行时会在gitea程序所在的目录（这里是`/usr/local/bin`）中创建custom、data和log文件夹，custom、data用于存储运行所需的数据，log文件夹用于存储运行时产生的日志。
+>
+>另外还要再创建两个文件夹，一个文件夹用于存储repository，另一个文件夹用于存储开启lfs功能时需要存储的文件。
+>
+>程序在运行时会在custom/conf/文件夹中创建一个app.ini文件（gitea的配置文件，存储数据库连接配置，网站地址等信息）。
+
+以上这些文件夹，文件的所有者都要是运行gitea的那个用户（`gitea`），且给这些文件夹，文件读写权限。
+
+最新版gitea程序不允许使用root用户运行，只能使用非root用户运行，不经过配置非root用户是没有`/usr/local/bin`文件夹的写权限的，即使gitea运行时会自动创建文件夹，但是也会因为权限不足创建失败，然后程序报错，结束运行...
+
+这里可以手动创建这些目录和文件，并把所有者改成运行gitea的那个用户（`gitea`），给读写权限。
+
+
+#### 创建文件夹、文件
+
 
 ```
 mkdir /usr/local/bin/data
 mkdir /usr/local/bin/custom
-mkdir /usr/local/bin/data/tmp/package-upload
-mkdir /usr/local/bin/data/tmp
-mkdir -p /usr/local/bin/custom/conf/
+mkdir /usr/local/bin/log
+```
 
-echo > /usr/local/bin/custom/conf/app.ini
+#### 改文件、文件夹所有者，给写入权限
 
+```
 chown -R gitea /usr/local/bin/custom
 chown -R gitea /usr/local/bin/data
 chmod -R 755 /usr/local/bin/data
@@ -145,11 +161,12 @@ chown -R gitea /opt/gitea
 chmod -R 755 /opt/gitea
 ```
 
->/opt/gitea是我设置的存储git仓库文件的路径
+>用于存储repository，和lfs功能时需要存储的文件都放在/opt/gitea文件夹中
 >
 >chown是把文件夹/文件的所有者更改
 >
 >chmod是配置读写和可执行的权限
+
 
 
 ### 测试启动 gitea
