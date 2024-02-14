@@ -1,8 +1,8 @@
 ---
 title: Cloudflare R2对象存储使用S3 Browser管理文件、文件夹
 category: Linux
-tags: 对象存储,S3,windows
-updatedAt: 2024-02-14T05:48:47.670Z
+tags: 对象存储,S3,windows,cloudflare,R2
+updatedAt: 2024-02-14T05:49:52.277Z
 date: 2024-02-14T05:48:47.670Z
 ---
 
