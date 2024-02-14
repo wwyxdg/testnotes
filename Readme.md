@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-14 13:57:41
+updatedAt: 2024-02-14 21:11:32
 ---
 
 
@@ -22,6 +22,8 @@ updatedAt: 2024-02-14 13:57:41
 
 7. [Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md](src/branch/master/7/Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md)
 
+8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](src/branch/master/8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
+
 
 
 ## Github/Gitee/Gitlab/本地文件索引
@@ -39,4 +41,6 @@ updatedAt: 2024-02-14 13:57:41
 6. [Debian、Ubuntu安装docker与docker-compose.md](6/Debian、Ubuntu安装docker与docker-compose.md)
 
 7. [Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md](7/Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md)
+
+8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
 
