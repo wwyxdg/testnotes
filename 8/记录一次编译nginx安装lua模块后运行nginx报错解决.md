@@ -2,7 +2,7 @@
 title: 记录一次编译nginx安装lua模块后运行nginx报错解决
 category: 折腾记录
 tags: nginx,linux
-updatedAt: 2024-02-14T13:11:31.784Z
+updatedAt: 2024-02-14T13:15:28.994Z
 date: 2024-02-14T13:11:31.784Z
 ---
 
@@ -120,4 +120,4 @@ LuaJIT 2.1.1700206165 -- Copyright (C) 2005-2023 Mike Pall. https://luajit.org
 
 >参考：https://blog.csdn.net/wzr54321/article/details/127702437
 
-成功解决这俩问题，大功告成。。。
+成功解决这俩问题，nginx正常启动无报错，大功告成。。。
