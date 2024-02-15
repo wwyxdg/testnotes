@@ -2,12 +2,11 @@
 title: Debian、Ubuntu安装docker与docker-compose
 category: Linux
 tags: linux,docker
-updatedAt: 2024-02-15T02:31:03.426Z
+updatedAt: 2024-02-15T03:10:02.620Z
 date: 2024-02-08T15:38:45.151Z
 ---
 
 
-# Debian、Ubuntu安装docker与docker-compose
 ## 安装/卸载docker
 
 ### Debian安装docker
