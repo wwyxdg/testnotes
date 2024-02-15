@@ -2,12 +2,11 @@
 title: nginx反代vanblog配置
 category: Linux
 tags: vanblog,nginx,反向代理,linux,宝塔面板,宝塔
-updatedAt: 2024-02-15T02:31:47.571Z
+updatedAt: 2024-02-15T03:10:12.725Z
 date: 2024-02-08T14:19:54.908Z
 ---
 
 
-# nginx反代vanblog配置
 ## 反向代理配置代码
 
 ```nginx
