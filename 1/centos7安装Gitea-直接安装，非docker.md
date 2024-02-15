@@ -2,7 +2,7 @@
 title: centos7安装Gitea-直接安装，非docker
 category: Linux
 tags: centos,gitea,git,linux
-updatedAt: 2024-02-13T05:44:19.892Z
+updatedAt: 2024-02-15T02:29:44.892Z
 date: 2024-02-08T13:06:14.280Z
 ---
 
@@ -11,6 +11,7 @@ gitea 是一款轻量级的 Git 托管解决方案，它采用 Go 语言编写�
 
 <!-- more -->
 
+# centos7安装Gitea-直接安装，非docker
 ## 下载gitea程序及配置环境
 ### 安装Golang
 
