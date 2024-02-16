@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-16 21:43:44
+updatedAt: 2024-02-16 21:44:12
 ---
 
 
@@ -20,7 +20,7 @@ updatedAt: 2024-02-16 21:43:44
 
 6. [Debian、Ubuntu安装docker与docker-compose.md](src/branch/master/6/Debian、Ubuntu安装docker与docker-compose.md)
 
-7. [Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md](src/branch/master/7/Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md)
+7. [使用S3_Browser管理Cloudflare_R2对象存储.md](src/branch/master/7/使用S3_Browser管理Cloudflare_R2对象存储.md)
 
 8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](src/branch/master/8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
 
@@ -40,7 +40,7 @@ updatedAt: 2024-02-16 21:43:44
 
 6. [Debian、Ubuntu安装docker与docker-compose.md](6/Debian、Ubuntu安装docker与docker-compose.md)
 
-7. [Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md](7/Cloudflare_R2对象存储使用S3_Browser管理文件、文件夹.md)
+7. [使用S3_Browser管理Cloudflare_R2对象存储.md](7/使用S3_Browser管理Cloudflare_R2对象存储.md)
 
 8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
 
