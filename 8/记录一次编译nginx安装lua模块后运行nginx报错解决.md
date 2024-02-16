@@ -2,7 +2,7 @@
 title: 记录一次编译nginx安装lua模块后运行nginx报错解决
 category: 折腾记录
 tags: nginx,linux
-updatedAt: 2024-02-15T03:08:25.710Z
+updatedAt: 2024-02-16T04:20:07.990Z
 date: 2024-02-14T13:11:31.784Z
 ---
 
@@ -40,7 +40,7 @@ nginx: [alert] failed to load the 'resty.core' module (https://github.com/openre
 
 ## 解决`module 'resty.core' not found`
 
-我在编译nginx时用的`lua-nginx-module`版本是`0.10.26`，低版本的模块（<`0.10.16`）可以使用`lua_load_resty_core off;`这个配置解决问题，告别那边就要手动安装这俩模块。
+我在编译nginx时用的`lua-nginx-module`版本是`0.10.26`，低版本的模块（<`0.10.16`）可以使用`lua_load_resty_core off;`这个配置解决问题。高版本的模块中不支持这行配置命令，要解决这个问题，就要手动安装`lua-resty-lrucache`和`lua-resty-core`。
 
 
 ### 下载`lua-resty-lrucache`和`lua-resty-core`这两个模块源代码，使用`make install`命令安装这两个模块。
