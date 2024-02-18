@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-18 16:50:42
+updatedAt: 2024-02-18 16:50:45
 ---
 
 
@@ -26,6 +26,8 @@ updatedAt: 2024-02-18 16:50:42
 
 9. [宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md](src/branch/master/9/宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md)
 
+10. [安装宝塔面板nginx防火墙启动失败解决方案.md](src/branch/master/10/安装宝塔面板nginx防火墙启动失败解决方案.md)
+
 
 
 ## Github/Gitee/Gitlab/本地文件索引
@@ -47,4 +49,6 @@ updatedAt: 2024-02-18 16:50:42
 8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
 
 9. [宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md](9/宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md)
+
+10. [安装宝塔面板nginx防火墙启动失败解决方案.md](10/安装宝塔面板nginx防火墙启动失败解决方案.md)
 
