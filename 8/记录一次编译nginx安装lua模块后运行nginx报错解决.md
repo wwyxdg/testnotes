@@ -2,7 +2,7 @@
 title: 记录一次编译nginx安装lua模块后运行nginx报错解决
 category: 折腾记录
 tags: nginx,linux
-updatedAt: 2024-02-16T04:20:07.990Z
+updatedAt: 2024-02-18T07:51:51.494Z
 date: 2024-02-14T13:11:31.784Z
 ---
 
@@ -10,6 +10,9 @@ date: 2024-02-14T13:11:31.784Z
 之前手动编译安装了nginx最新版，因为当时忘了给nginx添加lua模块。就重新下载了lua模块源码重新编译，编译时提示`./configure: error: unsupported LuaJIT version； ngx_http_lua_module requires LuaJIT 2.x.`,添加完环境变量后正常编译了,编译完后运行nginx报错。看错误提示，应该主要是`module 'thread.exdata' not found`和`module 'resty.core' not found`这俩问题。
 折腾几个小时才搞定。特地记录下。
 
+2024-2-18:
+>如果使用宝塔的一键安装脚本安装1.25.3nginx也出现这个问题，可以尝试在nginx配置文件中`http{}`
+>这一段加入`lua_package_path "/www/server/nginx/lib/lua/?.lua;";`
 
 <!-- more -->
 
