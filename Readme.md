@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-18 16:10:15
+updatedAt: 2024-02-18 16:50:42
 ---
 
 
@@ -24,6 +24,8 @@ updatedAt: 2024-02-18 16:10:15
 
 8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](src/branch/master/8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
 
+9. [宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md](src/branch/master/9/宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md)
+
 
 
 ## Github/Gitee/Gitlab/本地文件索引
@@ -43,4 +45,6 @@ updatedAt: 2024-02-18 16:10:15
 7. [使用S3_Browser管理Cloudflare_R2对象存储.md](7/使用S3_Browser管理Cloudflare_R2对象存储.md)
 
 8. [记录一次编译nginx安装lua模块后运行nginx报错解决.md](8/记录一次编译nginx安装lua模块后运行nginx报错解决.md)
+
+9. [宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md](9/宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md)
 
