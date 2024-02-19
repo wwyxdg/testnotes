@@ -1,8 +1,8 @@
 ---
 title: 宝塔面板nginx升级1.25版本启动报错`module 'resty.core' not found`解决方案
-category: Linux
-tags: 宝塔面板,宝塔,nginx,linux
-updatedAt: 2024-02-18T08:50:41.328Z
+category: 宝塔面板相关
+tags: 宝塔面板,nginx,linux
+updatedAt: 2024-02-19T14:38:19.026Z
 date: 2024-02-18T08:50:41.328Z
 ---
 

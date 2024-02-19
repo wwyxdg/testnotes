@@ -1,6 +1,6 @@
 ---
 title: 文章索引
-updatedAt: 2024-02-18 16:50:45
+updatedAt: 2024-02-19 22:50:22
 ---
 
 
@@ -28,6 +28,8 @@ updatedAt: 2024-02-18 16:50:45
 
 10. [安装宝塔面板nginx防火墙启动失败解决方案.md](src/branch/master/10/安装宝塔面板nginx防火墙启动失败解决方案.md)
 
+11. [vanblog配置图床图片存储到cloudflare_R2存储桶（理论S3_API接口存储桶通用）.md](src/branch/master/11/vanblog配置图床图片存储到cloudflare_R2存储桶（理论S3_API接口存储桶通用）.md)
+
 
 
 ## Github/Gitee/Gitlab/本地文件索引
@@ -51,4 +53,6 @@ updatedAt: 2024-02-18 16:50:45
 9. [宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md](9/宝塔面板nginx升级1.25版本启动报错`module_'resty.core'_not_found`解决方案.md)
 
 10. [安装宝塔面板nginx防火墙启动失败解决方案.md](10/安装宝塔面板nginx防火墙启动失败解决方案.md)
+
+11. [vanblog配置图床图片存储到cloudflare_R2存储桶（理论S3_API接口存储桶通用）.md](11/vanblog配置图床图片存储到cloudflare_R2存储桶（理论S3_API接口存储桶通用）.md)
 

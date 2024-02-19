@@ -1,8 +1,8 @@
 ---
 title: 安装宝塔面板nginx防火墙启动失败解决方案
-category: Linux
-tags: nginx,linux,宝塔
-updatedAt: 2024-02-18T08:50:44.573Z
+category: 宝塔面板相关
+tags: nginx,linux
+updatedAt: 2024-02-19T14:38:30.159Z
 date: 2024-02-18T08:50:44.573Z
 ---
 

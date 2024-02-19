@@ -1,8 +1,8 @@
 ---
 title: 记录一次编译nginx安装lua模块后运行nginx报错解决
-category: 折腾记录
+category: vanblog配置
 tags: nginx,linux
-updatedAt: 2024-02-18T07:52:53.222Z
+updatedAt: 2024-02-19T14:36:19.153Z
 date: 2024-02-14T13:11:31.784Z
 ---
 
