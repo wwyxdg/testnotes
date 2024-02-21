@@ -2,7 +2,7 @@
 title: 宝塔面板nginx升级1.25版本启动报错`module 'resty.core' not found`解决方案
 category: 宝塔面板相关
 tags: 宝塔面板,nginx,linux
-updatedAt: 2024-02-19T14:38:19.026Z
+updatedAt: 2024-02-21T12:59:28.151Z
 date: 2024-02-18T08:50:41.328Z
 ---
 
@@ -33,5 +33,5 @@ no file '/usr/local/lib/lua/5.1/loadall.so') in /www/server/nginx/conf/nginx.con
 
 ## 解决方案
 
-可以尝试在nginx配置文件中`http{}`这一段加入lua_package_path`"/www/server/nginx/lib/lua/?.lua;";`
+可以尝试在nginx配置文件中`http{}`这一段加入`lua_package_path "/www/server/nginx/lib/lua/?.lua;";`
 
