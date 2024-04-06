@@ -2,7 +2,7 @@
 title: Debian、Ubuntu安装docker与docker-compose
 category: Linux
 tags: linux,docker
-updatedAt: 2024-02-18T08:10:14.950Z
+updatedAt: 2024-04-06T13:32:28.714Z
 date: 2024-02-08T15:38:45.151Z
 ---
 
@@ -158,7 +158,7 @@ chmod +x /usr/local/bin/docker-compose
 ```
 查看是否安装成功
 ```
-docker-compose -version
+docker-compose --version
 ```
 
 2. ### 卸载docker-compose
