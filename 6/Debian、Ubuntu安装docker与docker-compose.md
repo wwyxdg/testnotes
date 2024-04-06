@@ -2,7 +2,7 @@
 title: Debian、Ubuntu安装docker与docker-compose
 category: Linux
 tags: linux,docker
-updatedAt: 2024-04-06T13:32:28.714Z
+updatedAt: 2024-04-06T14:42:23.358Z
 date: 2024-02-08T15:38:45.151Z
 ---
 
@@ -35,7 +35,7 @@ sudo apt-get -y install apt-transport-https ca-certificates curl gnupg2 software
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo apt-key add -
 ```
 
->比较新的系统在执行这个的时候可能会提示错误：
+>比较新的系统在执行这个的时候可能会有警告，不过不影响导入密钥：
 
 ```
 root@VM-0-4-debian:~# curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo apt-key add -
@@ -46,36 +46,6 @@ OK
 >解释：
 >
 >apt-key 是一个用于管理Debian及其衍生系统中APT软件包管理器所用的密钥的命令。在较新版本的Debian和Ubuntu系统中，该命令已被弃用，并建议使用新的方法（用`gpg`命令）来管理密钥。
-
-这时候可以先把GPG密钥下载下载，再用`gpg`命令导入进去
-
-下载密钥保存成名为`gpgfile`的文件：
-```
-curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg -o gpgfile
-```
-
-使用`gpg`命令导入密钥：
-```
-gpg --import gpgfile
-```
-
-
-运行过程记录：
-```
-root@VM-0-4-debian:~# curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg -o gpgfile
-root@VM-0-4-debian:~# gpg --import gpgfile
-gpg: directory '/root/.gnupg' created
-gpg: keybox '/root/.gnupg/pubring.kbx' created
-gpg: /root/.gnupg/trustdb.gpg: trustdb created
-gpg: key 8D81803C0EBFCD88: public key "Docker Release (CE deb) <docker@docker.com>" imported
-gpg: Total number processed: 1
-gpg:               imported: 1
-```
-
->理论上合成一条命令也是可以的：
->```
->curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | gpg --import
->```
 
 
 #### 使用以下指令设置稳定版仓库
